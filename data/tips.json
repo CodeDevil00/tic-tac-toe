@@ -1,0 +1,10 @@
+[
+  "Mobile-first: design for small screens first, then enhance for larger screens.",
+  "Use flexible layouts: CSS Grid/Flexbox + media queries handle most responsiveness.",
+  "Prefer HTTPS everywhere; never submit passwords over HTTP.",
+  "Store session IDs in cookies with Secure, HttpOnly, and SameSite when possible.",
+  "Progressive enhancement: make core content usable even if JavaScript fails.",
+  "Optimize performance: compress images, defer non-critical JS, and avoid layout shift.",
+  "Accessibility is UX: labels, focus states, contrast, and keyboard navigation matter.",
+  "Use clear feedback: inline validation + toasts reduce user confusion."
+]

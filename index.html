@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Website Practices - Mini Market Study Demo</title>
+  <meta name="description" content="A responsive, accessible demo page showing modern web development practices: responsiveness, security awareness, and interactivity." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">MW</div>
+        <div>
+          <div class="brand-title">Modern Web Practices</div>
+          <div class="brand-subtitle">Responsive • Secure • Interactive</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div id="navMenu" class="nav-menu">
+          <a href="#insights">Insights</a>
+          <a href="#components">Components</a>
+          <a href="#form">Form</a>
+          <a href="tictactoe.html">Tic-Tac-Toe</a>
+        </div>
+      </nav>
+
+      <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle dark mode">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <span class="btn-text">Theme</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>What “modern” websites do differently</h1>
+          <p class="lead">
+            Modern sites focus on <strong>mobile-first responsiveness</strong>, <strong>HTTPS security</strong>,
+            and <strong>interactive experiences</strong> that feel fast and trustworthy.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#insights">Explore insights</a>
+            <a class="btn btn-secondary" href="tictactoe.html">Play Tic-Tac-Toe</a>
+          </div>
+
+          <div class="tip-card" aria-live="polite">
+            <div class="tip-label">Live tip</div>
+            <div id="tipText" class="tip-text">Loading tip…</div>
+            <div class="tip-actions">
+              <button id="nextTip" class="btn btn-ghost" type="button">Next tip</button>
+              <button id="copyTip" class="btn btn-ghost" type="button">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-aside" role="region" aria-label="Security and performance summary">
+          <div class="stat-grid">
+            <div class="stat">
+              <div class="stat-num">Responsive</div>
+              <div class="stat-label">Layouts adapt to screen size</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">HTTPS</div>
+              <div class="stat-label">Encrypts traffic, builds trust</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Interactive</div>
+              <div class="stat-label">JS-driven UI + feedback</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Accessible</div>
+              <div class="stat-label">Keyboard & screen-reader friendly</div>
+            </div>
+          </div>
+
+          <div class="callout">
+            <h2 class="h3">Security note</h2>
+            <p>
+              This demo uses a <em>cookie consent banner</em> and shows how a “remember me”
+              preference can be stored locally (no backend needed).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Market insights (quick)</h2>
+          <p class="muted">
+            These are the patterns you’ll find across e-commerce, banking, education, and SaaS websites.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Responsiveness</h3>
+            <ul>
+              <li>Mobile-first layouts using flexible grids and media queries</li>
+              <li>Touch-friendly spacing and readable typography</li>
+              <li>Performance budgets for slow networks</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Security (HTTP vs HTTPS)</h3>
+            <ul>
+              <li>HTTPS encrypts data in transit, reducing interception risks</li>
+              <li>Secure cookies with <code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code></li>
+              <li>Forms should never submit passwords on HTTP</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Interactivity</h3>
+            <ul>
+              <li>Instant feedback: validation, toasts, skeleton loaders</li>
+              <li>Progressive enhancement (works without JS, improves with JS)</li>
+              <li>Local storage for preferences and faster UX</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Standard components</h2>
+          <p class="muted">A modern page typically combines reusable UI blocks and consistent spacing.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Layout building blocks</h3>
+            <ol>
+              <li>Header + navigation (hamburger on small screens)</li>
+              <li>Hero section with primary call-to-action</li>
+              <li>Cards/grid for features or products</li>
+              <li>Forms for signup/contact/checkout</li>
+              <li>Footer with legal + links</li>
+            </ol>
+          </div>
+
+          <div class="panel">
+            <h3>UX micro-interactions</h3>
+            <div class="chips" aria-label="Common interactivity patterns">
+              <span class="chip">Theme toggle</span>
+              <span class="chip">Sticky header</span>
+              <span class="chip">Copy button</span>
+              <span class="chip">Toast message</span>
+              <span class="chip">Client validation</span>
+              <span class="chip">Local preferences</span>
+            </div>
+
+            <button id="toastBtn" class="btn btn-primary" type="button">Show toast</button>
+            <p class="muted small">Try it. This uses JavaScript to create feedback without reloading the page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Responsive form (with validation)</h2>
+          <p class="muted">
+            In real products, forms are where security, sessions, cookies, and UX all meet.
+          </p>
+        </div>
+
+        <form id="contactForm" class="form" novalidate>
+          <div class="form-row">
+            <label>
+              Full name
+              <input name="name" type="text" autocomplete="name" required minlength="2" placeholder="e.g., Aditya Dwivedi" />
+              <span class="field-hint">Required. Minimum 2 characters.</span>
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              <span class="field-hint">Required. We'll never share your email.</span>
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea name="message" rows="4" required minlength="10" placeholder="Write a short message…"></textarea>
+            <span class="field-hint">Required. Minimum 10 characters.</span>
+          </label>
+
+          <div class="form-row">
+            <label class="checkbox">
+              <input id="rememberMe" type="checkbox" />
+              <span>Remember me on this device</span>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">Modern Web Practices</div>
+          <p class="muted small">
+            Demo for an academic market-study assignment: HTML + CSS + JavaScript fundamentals.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#main">Back to top</a>
+          <a href="tictactoe.html">Tic-Tac-Toe</a>
+          <a href="#" id="resetPrefs">Reset preferences</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Cookie banner -->
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-text">
+      This demo uses a cookie to remember your consent (and localStorage for theme/score). Accept?
+    </div>
+    <div class="cookie-actions">
+      <button id="cookieDecline" class="btn btn-ghost" type="button">Decline</button>
+      <button id="cookieAccept" class="btn btn-primary" type="button">Accept</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
