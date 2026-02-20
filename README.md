@@ -25,4 +25,4 @@ Right click `index.html` -> "Open with Live Server".
 
 ## Hosting (demo link)
 - GitHub Pages: https://codedevil00.github.io/tic-tac-toe/
-- Netlify: drag-and-drop the folder in Netlify "Deploys".
+- Netlify: https://market-research-tic-tac-toe.netlify.app/
