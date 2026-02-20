@@ -24,6 +24,5 @@ Right click `index.html` -> "Open with Live Server".
 - `data/tips.json`
 
 ## Hosting (demo link)
-You can host this on GitHub Pages / Netlify / Vercel:
-- GitHub Pages: push this folder to a repo and enable Pages from the repo settings.
+- GitHub Pages: https://codedevil00.github.io/tic-tac-toe/
 - Netlify: drag-and-drop the folder in Netlify "Deploys".
